@@ -1,5 +1,5 @@
-url: https://johntelforduk.github.io/54-nations-agency/
-baseurl: johntelforduk.github.io/54-nations-agency/
+url: "https://johntelforduk.github.io"
+baseurl: "/54-nations-agency"
 
 # Site settings
 title: Awesome Title
