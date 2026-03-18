@@ -1,45 +1,107 @@
 <!-- How it works Section -->
-<section id="solutions" style="background-color:#f9f9f9; padding:60px 0;">
+<section id="solutions" style="background-color:#f5f7fa; padding:80px 0;">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-8">
                 <h2 class="section-heading">What We Aim to Change</h2>
-                <p class="section-subheading text-muted">How the 54 Nations Code transforms education and representation</p>
+                <p class="section-subheading text-muted">Transforming education about Africa with the 54 Nations Code</p>
             </div>
         </div>
 
-        <!-- Solution 1: Specificity -->
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <img src="img/specificity.jpg" alt="Specificity" class="img-fluid rounded" style="max-height:250px; object-fit:cover;">
+        <div class="row">
+            <!-- Solution Card 1: Specificity -->
+            <div class="col-md-4 mb-4">
+                <div class="solution-card" data-aos="fade-up">
+                    <img src="img/specificity.jpg" alt="Specificity">
+                    <div class="solution-content">
+                        <h4>Specificity</h4>
+                        <p>Encourage teachers and curricula to refer to <strong>individual countries, cultures, and regions</strong>, rather than treating Africa as a single entity.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h3>Specificity</h3>
-                <p class="text-muted">Encourage teachers and curricula to refer to **individual countries, cultures, and regions**, rather than treating Africa as a single entity.</p>
+
+            <!-- Solution Card 2: Accuracy -->
+            <div class="col-md-4 mb-4">
+                <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/accuracy.jpg" alt="Accuracy">
+                    <div class="solution-content">
+                        <h4>Accuracy</h4>
+                        <p>Ensure all teaching materials and discussions are <strong>factually correct</strong>, context-rich, and reflect the true diversity of African nations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Card 3: Narrative -->
+            <div class="col-md-4 mb-4">
+                <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/narrative.jpg" alt="Narrative">
+                    <div class="solution-content">
+                        <h4>Narrative</h4>
+                        <p>Promote a <strong>positive and accurate portrayal of African nations</strong>, actively countering stereotypes and rewriting the narrative in classrooms.</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Solution 2: Accuracy -->
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
-            <div class="col-md-6">
-                <img src="img/accuracy.jpg" alt="Accuracy" class="img-fluid rounded" style="max-height:250px; object-fit:cover;">
-            </div>
-            <div class="col-md-6">
-                <h3>Accuracy</h3>
-                <p class="text-muted">Ensure all teaching materials and discussions are **factually correct**, context-rich, and reflect the true diversity of African nations.</p>
-            </div>
-        </div>
-
-        <!-- Solution 3: Narrative -->
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <img src="img/narrative.jpg" alt="Narrative" class="img-fluid rounded" style="max-height:250px; object-fit:cover;">
-            </div>
-            <div class="col-md-6">
-                <h3>Narrative</h3>
-                <p class="text-muted">Promote a **positive and accurate portrayal of African nations**, actively countering stereotypes and rewriting the narrative in classrooms.</p>
-            </div>
-        </div>
-
     </div>
+
+    <style>
+        /* Card styling */
+        .solution-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .solution-content {
+            padding: 20px;
+        }
+
+        .solution-content h4 {
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .solution-content p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .solution-card img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .solution-card img {
+                height: 150px;
+            }
+        }
+    </style>
+
+    <!-- Optional: AOS animation library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </section>
