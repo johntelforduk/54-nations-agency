@@ -1,35 +1,44 @@
-<!-- Team Section -->
-<section id="team" class="bg-light-gray">
+<!-- Team / About Section -->
+<section id="team" class="bg-light-gray" style="padding: 80px 0;">
     <div class="container">
 
-        <div class="row">
-            {% assign member = site.people[0] %}
+        {% assign member = site.people[0] %}
+
+        <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
 
             <!-- Image -->
-            <div class="col-sm-4 col-sm-offset-2 text-center">
-                <div class="team-member">
-                    <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
-                    <h4>{{ member.name }}</h4>
-                    <p class="text-muted">{{ member.position }}</p>
-                </div>
+            <div class="col-md-5 text-center" style="margin-bottom: 30px;">
+                <img src="img/team/{{ member.pic }}.jpg" 
+                     class="img-responsive img-circle" 
+                     alt="" 
+                     style="max-width: 260px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+
+                <h4 style="margin-top: 20px; font-weight: 600;">{{ member.name }}</h4>
+                <p class="text-muted" style="margin-bottom: 0;">{{ member.position }}</p>
             </div>
 
-            <!-- Text beside image -->
-            <div class="col-sm-4">
-                <h2 class="section-heading">Behind 54 Nations</h2>
-                <h3 class="section-subheading text-muted">
-                    Why I created the 54 Nations Code.
-                </h3>
-                <p class="text-muted">
-                    I started the 54 Nations Code after noticing how often Africa was spoken about in school as if it were one place, through phrases like “African history” or “African culture.” As a continent of 54 countries, each with its own identity, this lack of specificity felt both inaccurate and limiting. What began as a simple question about why this happens grew into a determination to create something that could change it. Behind this initiative, is just one South-London school girl, with a vision and hope for changing the tought perception of Africa.
+            <!-- Text -->
+            <div class="col-md-6 col-md-offset-1">
+                <h2 class="section-heading" style="font-weight: 700; margin-bottom: 10px;">
+                    Behind 54 Nations
+                </h2>
+
+                <h4 class="text-muted" style="margin-bottom: 20px;">
+                    Why I created the 54 Nations Code
+                </h4>
+
+                <p class="text-muted" style="font-size: 16px; line-height: 1.7;">
+                    Behind this initiative is just one South London school student with a vision to reshape how Africa is understood. 
+                    I created the 54 Nations Code after noticing how often Africa was spoken about as if it were a single place, 
+                    through phrases like “African history” or “African culture.”
+                </p>
+
+                <p class="text-muted" style="font-size: 16px; line-height: 1.7;">
+                    As a continent of 54 countries, each with its own identity, this lack of specificity felt both inaccurate and limiting. 
+                    What began as a simple question grew into a determination to create something that could challenge that narrative.
                 </p>
             </div>
 
-        </div>
-
-    </div>
-</section>
-            </div>
         </div>
 
     </div>
