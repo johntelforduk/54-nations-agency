@@ -2,19 +2,19 @@ url: "https://www.54nations.org"
 baseurl: ""
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: 54 Nations Code
+email: 54nationscode@gmail.com
+description: "A student-led initiative transforming how Africa is taught in schools"
 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Oluwatamilore Telford
   pic: 1
-  position: Lead Designer
+  position: Founder
   social:
-    - title: twitter
-      url: #
+    - title: instagram
+      url: https://www.instagram.com/tamiloretelford?igsh=MTU4aGtncHFqNTQ0aQ%3D%3D&utm_source=qr
     - title: facebook
       url: #
     - title: stack-overflow
