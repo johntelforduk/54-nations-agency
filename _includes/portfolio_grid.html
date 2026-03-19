@@ -14,11 +14,10 @@
         </div>
 
         <!-- Three-step columns -->
-        <div class="row justify-content-center align-items-stretch" style="gap:30px;">
-
+        <div class="row justify-content-center">
             <!-- Step 1 -->
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
-                <div class="join-card d-flex flex-column align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-10 mb-4 d-flex justify-content-center">
+                <div class="join-card">
                     <div class="join-number">1</div>
                     <h4>Audit Curriculum</h4>
                     <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
@@ -26,8 +25,8 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
-                <div class="join-card d-flex flex-column align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-10 mb-4 d-flex justify-content-center">
+                <div class="join-card">
                     <div class="join-number">2</div>
                     <h4>Revise Content</h4>
                     <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
@@ -35,30 +34,29 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center mb-4">
-                <div class="join-card d-flex flex-column align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-10 mb-4 d-flex justify-content-center">
+                <div class="join-card">
                     <div class="join-number">3</div>
                     <h4>Share & Inspire</h4>
                     <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
                 </div>
             </div>
-
         </div>
-
     </div>
 
     <style>
+        /* Card style */
         .join-card {
             background: #000;
             border-radius: 16px;
             padding: 50px 20px 20px 20px;
-            position: relative;
             width: 100%;
             max-width: 280px;
             display: flex;
             flex-direction: column;
             align-items: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
 
         .join-card:hover {
@@ -66,6 +64,7 @@
             box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
+        /* Number circle */
         .join-number {
             background-color: #FFD700;
             color: #4B000F;
@@ -77,13 +76,13 @@
             display:flex;
             align-items:center;
             justify-content:center;
-            margin-top: -50px; /* moves the circle above card without overlapping content */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: -40px; /* sits above card without overlapping header text */
             z-index:2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .join-card h4 {
-            margin-top: 30px; /* space below number circle */
+            margin-top: 30px;
             margin-bottom:15px;
             font-size:1.4rem;
             font-weight:700;
@@ -98,14 +97,15 @@
             text-align:center;
         }
 
+        /* Responsive adjustments */
         @media (max-width:992px){
             .join-card { max-width: 260px; padding:45px 15px 15px 15px; }
-            .join-number { font-size:1.8rem; width:50px; height:50px; margin-top:-40px; }
+            .join-number { font-size:1.8rem; width:50px; height:50px; margin-top:-35px; }
         }
 
         @media (max-width:576px){
-            .join-card { max-width:90%; padding:40px 15px 15px 15px; }
-            .join-number { font-size:1.5rem; width:45px; height:45px; margin-top:-35px; }
+            .join-card { max-width:95%; padding:40px 15px 15px 15px; }
+            .join-number { font-size:1.5rem; width:45px; height:45px; margin-top:-30px; }
         }
     </style>
 </section>
