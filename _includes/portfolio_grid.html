@@ -41,10 +41,8 @@
       </div>
 
       <!-- Navigation arrows -->
-      <div class="carousel-nav">
-        <button id="prev">&lt;</button>
-        <button id="next">&gt;</button>
-      </div>
+      <button id="prev" class="carousel-arrow prev">&lt;</button>
+      <button id="next" class="carousel-arrow next">&gt;</button>
     </div>
 
   </div>
@@ -107,17 +105,11 @@
       text-align: center;
     }
 
-    .carousel-nav {
-      position: relative;
-      margin-top: -40px; /* raise arrows up so they slightly overlap card bottom */
-      display: flex;
-      justify-content: space-between;
-      max-width: 220px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .carousel-nav button {
+    /* Arrows now vertically centered on sides */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       background: #FFD700;
       color: #4B000F;
       font-size: 1.5rem;
@@ -126,17 +118,26 @@
       width: 50px;
       height: 50px;
       cursor: pointer;
-      transition: transform 0.2s;
+      z-index: 3;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .carousel-nav button:hover {
-      transform: scale(1.1);
+    .carousel-arrow.prev {
+      left: -25px;  /* slightly overlapping left side */
+    }
+
+    .carousel-arrow.next {
+      right: -25px; /* slightly overlapping right side */
+    }
+
+    .carousel-arrow:hover {
+      transform: translateY(-50%) scale(1.1);
     }
 
     @media(max-width:576px){
       .join-card { padding: 45px 15px 15px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-40px; }
-      .carousel-nav { max-width:180px; }
+      .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:-20px; right:-20px; }
     }
   </style>
 
