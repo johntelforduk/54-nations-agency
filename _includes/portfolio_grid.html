@@ -65,7 +65,7 @@
       min-width: 100%;
       background: #000;
       border-radius: 16px;
-      padding: 90px 20px 20px 20px; /* extra top padding to fit circle */
+      padding: 60px 20px 20px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -74,7 +74,12 @@
       box-sizing: border-box;
     }
 
+    /* Yellow circle completely inside card, closer to vertical midline */
     .join-number {
+      position: absolute;
+      top: 20px; /* distance from top inside the card */
+      left: 50%;
+      transform: translateX(-50%);
       background-color: #FFD700;
       color: #4B000F;
       font-weight: 700;
@@ -85,13 +90,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px; /* small gap inside card */
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       z-index: 2;
     }
 
     .join-card h4 {
-      margin-top: 10px;
+      margin-top: 50px; /* space to avoid circle overlap */
       margin-bottom: 15px;
       font-size: 1.4rem;
       font-weight: 700;
@@ -131,9 +135,10 @@
     }
 
     @media(max-width:576px){
-      .join-card { padding:80px 15px 15px 15px; }
-      .join-number { width:50px; height:50px; font-size:1.5rem; margin-bottom:15px; }
+      .join-card { padding: 80px 15px 15px 15px; }
+      .join-number { width:50px; height:50px; font-size:1.5rem; top:15px; }
       .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:-20px; right:-20px; }
+      .join-card h4 { margin-top:40px; }
     }
   </style>
 
