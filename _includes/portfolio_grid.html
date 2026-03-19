@@ -49,17 +49,11 @@
 
       </div>
 
-      <!-- Navigation arrows -->
-      <div class="carousel-arrow-container">
-        <button id="prev" class="carousel-arrow prev">&lt;</button>
-        <button id="next" class="carousel-arrow next">&gt;</button>
-      </div>
-
-      <!-- Step indicators -->
+      <!-- Step indicators (now used for navigation) -->
       <div class="carousel-indicators mt-4">
-        <div class="indicator active">1</div>
-        <div class="indicator">2</div>
-        <div class="indicator">3</div>
+        <div class="indicator active" data-step="0">1</div>
+        <div class="indicator" data-step="1">2</div>
+        <div class="indicator" data-step="2">3</div>
       </div>
 
     </div>
@@ -121,33 +115,12 @@
       color: #fff;
     }
 
-    /* Arrows */
-    .carousel-arrow {
-      background: #FFD700;
-      color: #4B000F;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      margin: 0 10px;
-    }
-
-    .carousel-arrow-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .carousel-arrow:hover { transform: scale(1.1); }
-
     /* Step indicators below carousel */
     .carousel-indicators {
       display: flex;
       justify-content: center;
       margin-top: 20px;
+      cursor: pointer;
     }
 
     .carousel-indicators .indicator {
@@ -173,7 +146,6 @@
     @media(max-width:576px){
       .join-card { padding: 30px 15px 15px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; margin-bottom:10px; }
-      .carousel-arrow { width:40px; height:40px; font-size:1.3rem; margin:0 5px; }
       .carousel-indicators .indicator { width:30px; height:30px; margin:0 5px; }
     }
   </style>
@@ -181,8 +153,6 @@
   <script>
     const wrapper = document.querySelector('.carousel-wrapper');
     const totalCards = document.querySelectorAll('.join-card').length;
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
     const indicators = document.querySelectorAll('.carousel-indicators .indicator');
     let currentIndex = 0;
 
@@ -191,16 +161,15 @@
       indicators.forEach((ind,i) => ind.classList.toggle('active', i===index));
     }
 
-    nextBtn.addEventListener('click', ()=> {
-      currentIndex = (currentIndex + 1) % totalCards;
-      showCard(currentIndex);
+    // Add click event for indicators
+    indicators.forEach(ind => {
+      ind.addEventListener('click', () => {
+        currentIndex = parseInt(ind.getAttribute('data-step'));
+        showCard(currentIndex);
+      });
     });
 
-    prevBtn.addEventListener('click', ()=> {
-      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-      showCard(currentIndex);
-    });
-
+    // Initialize first card
     showCard(currentIndex);
   </script>
 </section>
