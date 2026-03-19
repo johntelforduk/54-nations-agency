@@ -12,28 +12,28 @@
         <div class="row">
             <!-- Step 1 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="join-card" data-aos="fade-up">
+                <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">1</div>
                     <h4>Audit Curriculum</h4>
-                    <p>Review your lessons to identify where African countries are grouped or inaccurately represented.</p>
+                    <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
                 </div>
             </div>
 
             <!-- Step 2 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="join-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">2</div>
                     <h4>Revise Content</h4>
-                    <p>Update materials to highlight **individual nations**, their history, culture, and achievements.</p>
+                    <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="join-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">3</div>
                     <h4>Share & Inspire</h4>
-                    <p>Document your progress, share best practices, and encourage other schools to join the movement.</p>
+                    <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
         .join-card {
             background: #000;
             border-radius: 16px;
-            padding: 40px 20px 20px 20px;
+            padding: 40px 20px;
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             min-height: 250px;
@@ -86,22 +86,12 @@
 
         @media (max-width:992px){
             .join-number { top:-20px; font-size:1.7rem; width:50px; height:50px; }
-            .join-card { padding:30px 15px 15px 15px; min-height: 220px; }
+            .join-card { padding:30px 15px; min-height: 220px; }
         }
 
         @media (max-width:576px){
             .join-number { font-size:1.5rem; width:45px; height:45px; }
-            .join-card { min-height: 200px; padding:25px 10px 10px 10px; }
+            .join-card { min-height: 200px; padding:25px 10px; }
         }
     </style>
-
-    <!-- AOS animation library -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration:800,
-            once:true
-        });
-    </script>
 </section>
