@@ -48,12 +48,13 @@
   </div>
 
   <style>
+    /* Carousel container and wrapper */
     .carousel-container {
       position: relative;
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      overflow: hidden;
+      /* overflow removed so number circles are visible */
     }
 
     .carousel-wrapper {
@@ -61,6 +62,7 @@
       transition: transform 0.6s ease-in-out;
     }
 
+    /* Cards */
     .join-card {
       min-width: 100%;
       background: #000;
@@ -74,6 +76,7 @@
       box-sizing: border-box;
     }
 
+    /* Step number circle */
     .join-number {
       background-color: #FFD700;
       color: #4B000F;
@@ -85,11 +88,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -50px;
+      margin-top: -30px; /* slightly overlapping card */
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       z-index: 2;
     }
 
+    /* Card text */
     .join-card h4 {
       margin-top: 30px;
       margin-bottom: 15px;
@@ -106,7 +110,7 @@
       text-align: center;
     }
 
-    /* Arrows attached to card */
+    /* Arrows */
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -130,9 +134,10 @@
       transform: translateY(-50%) scale(1.1);
     }
 
+    /* Responsive */
     @media(max-width:576px){
       .join-card { padding: 45px 15px 15px 15px; }
-      .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-40px; }
+      .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-25px; }
       .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:-20px; right:-20px; }
     }
   </style>
