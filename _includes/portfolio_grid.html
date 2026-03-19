@@ -1,7 +1,6 @@
 <!-- Link somewhere in your navbar or above the page -->
 <section id="join-campaign" style="background-color:#4B000F; padding:80px 0; color:#fff;">
     <div class="container text-center">
-        <!-- Header -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8">
                 <h2 style="font-size:2.5rem; font-weight:700; color:#FFD700; cursor:pointer;">
@@ -11,10 +10,9 @@
             </div>
         </div>
 
-        <!-- Three-step columns -->
         <div class="row justify-content-center">
             <!-- Step 1 -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">1</div>
                     <h4>Audit Curriculum</h4>
@@ -23,7 +21,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">2</div>
                     <h4>Revise Content</h4>
@@ -32,7 +30,7 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">3</div>
                     <h4>Share & Inspire</h4>
@@ -46,12 +44,10 @@
         .join-card {
             background: #000;
             border-radius: 16px;
-            padding: 60px 20px 20px 20px; /* extra top padding to fit number circle */
+            padding: 60px 20px 20px 20px;
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             width: 100%;
-            max-width: 280px; /* fixed width for neatness */
-            box-sizing: border-box;
         }
 
         .join-card:hover {
@@ -79,7 +75,7 @@
         }
 
         .join-card h4 {
-            margin-top: 20px; /* spacing below number circle */
+            margin-top: 20px;
             margin-bottom:15px;
             font-size:1.4rem;
             font-weight:700;
@@ -92,14 +88,13 @@
             color:#fff;
         }
 
-        /* Responsive adjustments */
         @media (max-width:992px){
-            .join-card { max-width: 260px; padding:50px 15px 15px 15px; }
+            .join-card { padding:50px 15px 15px 15px; }
             .join-number { top:-25px; font-size:1.8rem; width:50px; height:50px; }
         }
 
         @media (max-width:576px){
-            .join-card { max-width:90%; padding:45px 15px 15px 15px; }
+            .join-card { padding:45px 15px 15px 15px; }
             .join-number { font-size:1.5rem; width:45px; height:45px; }
         }
     </style>
