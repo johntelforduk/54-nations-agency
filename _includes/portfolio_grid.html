@@ -1,17 +1,22 @@
+<!-- Link somewhere in your navbar or above the page -->
+<a href="#join-campaign" style="text-decoration:none; color:#FFD700; font-weight:700; font-size:1.2rem;">Join the 54 Nations Code</a>
+
 <section id="join-campaign" style="background-color:#4B000F; padding:80px 0; color:#fff;">
     <div class="container text-center">
         <!-- Header -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8">
-                <h2 style="font-size:2.5rem; font-weight:700; color:#FFD700;">Join the 54 Nations Code</h2>
+                <a href="#join-campaign" style="text-decoration:none; color:#FFD700;">
+                    <h2 style="font-size:2.5rem; font-weight:700; cursor:pointer;">Join the 54 Nations Code</h2>
+                </a>
                 <p style="font-size:1.2rem; color:#fff;">Empower your school to implement the 54 Nations Code and transform how African nations are taught.</p>
             </div>
         </div>
 
         <!-- Three-step columns -->
-        <div class="row">
+        <div class="row justify-content-center">
             <!-- Step 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">1</div>
                     <h4>Audit Curriculum</h4>
@@ -20,7 +25,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">2</div>
                     <h4>Revise Content</h4>
@@ -29,7 +34,7 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
                 <div class="join-card">
                     <div class="join-number" style="background-color:#FFD700; color:#4B000F;">3</div>
                     <h4>Share & Inspire</h4>
@@ -47,6 +52,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             min-height: 250px;
+            margin: auto; /* center narrower cards */
         }
 
         .join-card:hover {
@@ -84,6 +90,11 @@
             color:#fff;
         }
 
+        /* Make narrower and centered */
+        @media (max-width: 1200px) {
+            .col-lg-3 { max-width: 250px; }
+        }
+
         @media (max-width:992px){
             .join-number { top:-20px; font-size:1.7rem; width:50px; height:50px; }
             .join-card { padding:30px 15px; min-height: 220px; }
@@ -94,4 +105,11 @@
             .join-card { min-height: 200px; padding:25px 10px; }
         }
     </style>
+
+    <!-- AOS animation library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration:800, once:true });
+    </script>
 </section>
