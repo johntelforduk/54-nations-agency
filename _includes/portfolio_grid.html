@@ -1,98 +1,162 @@
-/* Carousel arrows naturally attached to card */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+<section id="join-campaign" style="background-color:#4B000F; padding:80px 0; color:#fff;">
+  <div class="container text-center">
 
-.carousel-wrapper {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-}
+    <!-- Header -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-12">
+        <h2 style="font-size:2.5rem; font-weight:700; color:#FFD700;">
+          <a href="#join-campaign" style="text-decoration:none; color:#FFD700;">Start using the 54 Nations Code</a>
+        </h2>
+        <p style="font-size:1.2rem; color:#fff; margin-bottom:50px;">
+          Empower your school to implement the 54 Nations Code and transform how African nations are taught.
+        </p>
+      </div>
+    </div>
 
-.join-card {
-  min-width: 100%;
-  background: #000;
-  border-radius: 16px;
-  padding: 60px 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+    <!-- Carousel -->
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
 
-/* Number circle */
-.join-number {
-  background-color: #FFD700;
-  color: #4B000F;
-  font-weight: 700;
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -50px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 2;
-}
+        <!-- Step 1 -->
+        <div class="join-card">
+          <div class="join-number">1</div>
+          <h4>Audit Curriculum</h4>
+          <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
+        </div>
 
-.join-card h4 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #FFD700;
-  text-align: center;
-}
+        <!-- Step 2 -->
+        <div class="join-card">
+          <div class="join-number">2</div>
+          <h4>Revise Content</h4>
+          <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
+        </div>
 
-.join-card p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #fff;
-  text-align: center;
-}
+        <!-- Step 3 -->
+        <div class="join-card">
+          <div class="join-number">3</div>
+          <h4>Share & Inspire</h4>
+          <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
+        </div>
 
-/* Arrows attached to the card */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #FFD700;
-  color: #4B000F;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  z-index: 3;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+      </div>
 
-/* Attach to edges of card */
-.carousel-arrow.prev {
-  left: -25px;  /* half-overlap outside card */
-}
+      <!-- Navigation arrows -->
+      <button id="prev" class="carousel-arrow prev">&lt;</button>
+      <button id="next" class="carousel-arrow next">&gt;</button>
+    </div>
 
-.carousel-arrow.next {
-  right: -25px; /* half-overlap outside card */
-}
+  </div>
 
-/* Hover effect */
-.carousel-arrow:hover {
-  transform: translateY(-50%) scale(1.1);
-}
+  <style>
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
 
-/* Mobile adjustments */
-@media(max-width:576px){
-  .join-card { padding: 45px 15px 15px 15px; }
-  .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-40px; }
-  .carousel-arrow { width:40px; height:40px; font-size:1.3rem; }
-  .carousel-arrow.prev { left: -20px; }
-  .carousel-arrow.next { right: -20px; }
-}
+    .carousel-wrapper {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .join-card {
+      min-width: 100%;
+      background: #000;
+      border-radius: 16px;
+      padding: 60px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .join-number {
+      background-color: #FFD700;
+      color: #4B000F;
+      font-weight: 700;
+      font-size: 2rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .join-card h4 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #FFD700;
+      text-align: center;
+    }
+
+    .join-card p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Arrows attached to card */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #FFD700;
+      color: #4B000F;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      z-index: 3;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .carousel-arrow.prev { left: -25px; }
+    .carousel-arrow.next { right: -25px; }
+
+    .carousel-arrow:hover {
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    @media(max-width:576px){
+      .join-card { padding: 45px 15px 15px 15px; }
+      .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-40px; }
+      .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:-20px; right:-20px; }
+    }
+  </style>
+
+  <script>
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const totalCards = document.querySelectorAll('.join-card').length;
+    let currentIndex = 0;
+
+    function showCard(index) {
+      wrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      showCard(currentIndex);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      showCard(currentIndex);
+    });
+
+    // Initialize first card
+    showCard(currentIndex);
+  </script>
+</section>
