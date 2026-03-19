@@ -55,14 +55,12 @@
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
-      height: 380px; /* fixed height so cards don’t stretch page */
       overflow: hidden;
     }
 
     .carousel-wrapper {
       display: flex;
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      transform-style: preserve-3d;
+      transition: transform 0.6s ease-in-out;
     }
 
     .join-card {
@@ -75,7 +73,6 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      backface-visibility: hidden;
     }
 
     .join-number {
@@ -111,9 +108,13 @@
     }
 
     .carousel-nav {
+      position: relative;
+      margin-top: -40px; /* raise arrows up so they slightly overlap card bottom */
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .carousel-nav button {
@@ -135,34 +136,30 @@
     @media(max-width:576px){
       .join-card { padding: 45px 15px 15px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-40px; }
-      .carousel-container { height:360px; }
+      .carousel-nav { max-width:180px; }
     }
   </style>
 
   <script>
     const wrapper = document.querySelector('.carousel-wrapper');
-    const cards = document.querySelectorAll('.join-card');
-    const total = cards.length;
-    let index = 0;
+    const totalCards = document.querySelectorAll('.join-card').length;
+    let currentIndex = 0;
 
-    function showCard(i) {
-      // rotate carousel using 3D effect
-      wrapper.style.transform = `rotateY(${i * -120}deg) translateZ(300px)`;
-      // optional: fade effect
-      cards.forEach((card, idx) => card.style.opacity = idx === i ? 1 : 0);
+    function showCard(index) {
+      wrapper.style.transform = `translateX(-${index * 100}%)`;
     }
 
     document.getElementById('next').addEventListener('click', () => {
-      index = (index + 1) % total;
-      showCard(index);
+      currentIndex = (currentIndex + 1) % totalCards;
+      showCard(currentIndex);
     });
 
     document.getElementById('prev').addEventListener('click', () => {
-      index = (index - 1 + total) % total;
-      showCard(index);
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      showCard(currentIndex);
     });
 
-    // initialize
-    showCard(index);
+    // Initialize first card
+    showCard(currentIndex);
   </script>
 </section>
