@@ -1,24 +1,26 @@
 <!-- Link somewhere in your navbar or above the page -->
 <section id="join-campaign" style="background-color:#4B000F; padding:80px 0; color:#fff;">
     <div class="container text-center">
+        <!-- Header -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8">
                 <h2 style="font-size:2.5rem; font-weight:700; color:#FFD700; cursor:pointer;">
                     <a href="#join-campaign" style="text-decoration:none; color:#FFD700;">Join the 54 Nations Code</a>
                 </h2>
-                <p style="font-size:1.2rem; color:#fff;">Empower your school to implement the 54 Nations Code and transform how African nations are taught.</p>
+                <p style="font-size:1.2rem; color:#fff; margin-bottom:80px;">
+                    Empower your school to implement the 54 Nations Code and transform how African nations are taught.
+                </p>
             </div>
         </div>
 
+        <!-- Three-step columns -->
         <div class="row justify-content-center">
             <!-- Step 1 -->
             <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">1</div>
-                    <div class="join-content">
-                        <h4>Audit Curriculum</h4>
-                        <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
-                    </div>
+                    <h4>Audit Curriculum</h4>
+                    <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
                 </div>
             </div>
 
@@ -26,10 +28,8 @@
             <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">2</div>
-                    <div class="join-content">
-                        <h4>Revise Content</h4>
-                        <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
-                    </div>
+                    <h4>Revise Content</h4>
+                    <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
                 </div>
             </div>
 
@@ -37,10 +37,8 @@
             <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="join-card">
                     <div class="join-number">3</div>
-                    <div class="join-content">
-                        <h4>Share & Inspire</h4>
-                        <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
-                    </div>
+                    <h4>Share & Inspire</h4>
+                    <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
                 </div>
             </div>
         </div>
@@ -50,7 +48,7 @@
         .join-card {
             background: #000;
             border-radius: 16px;
-            padding: 40px 20px 20px 20px; /* less top padding, handled by .join-content */
+            padding: 60px 20px 20px 20px;
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             width: 100%;
@@ -64,7 +62,7 @@
 
         .join-number {
             position: absolute;
-            top: -30px;  /* circle sits above the card */
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
             background-color: #FFD700;
@@ -81,11 +79,8 @@
             z-index:2;
         }
 
-        .join-content {
-            margin-top: 40px; /* ensures content starts below the number circle */
-        }
-
         .join-card h4 {
+            margin-top: 30px; /* space below number circle */
             margin-bottom:15px;
             font-size:1.4rem;
             font-weight:700;
@@ -98,17 +93,14 @@
             color:#fff;
         }
 
-        /* Responsive adjustments */
         @media (max-width:992px){
-            .join-card { max-width: 260px; padding:30px 15px 15px 15px; }
+            .join-card { max-width: 260px; padding:50px 15px 15px 15px; }
             .join-number { top:-25px; font-size:1.8rem; width:50px; height:50px; }
-            .join-content { margin-top:35px; }
         }
 
         @media (max-width:576px){
-            .join-card { max-width:90%; padding:25px 15px 15px 15px; }
+            .join-card { max-width:90%; padding:45px 15px 15px 15px; }
             .join-number { font-size:1.5rem; width:45px; height:45px; }
-            .join-content { margin-top:30px; }
         }
     </style>
 </section>
