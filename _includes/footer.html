@@ -1,25 +1,33 @@
   <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row text-center text-md-left">
+
+            <!-- Copyright -->
+            <div class="col-md-4 mb-3">
+                <span class="copyright">
+                    Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}
+                </span>
             </div>
+
+            <!-- Social Icons -->
+            <div class="col-md-4 mb-3">
+                <ul class="list-inline social-buttons">
+                    <li>
+                        <a href="https://www.instagram.com/54nationscode?igsh=N21hOWI0Yzh4emFw&utm_source=qrhttps://www.instagram.com/54nationscode?igsh=N21hOWI0Yzh4emFw&utm_source=qr" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/54-nations/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Empty column (keeps layout balanced) -->
+            <div class="col-md-4 mb-3"></div>
+
         </div>
-    </footer>
+    </div>
+</footer>
