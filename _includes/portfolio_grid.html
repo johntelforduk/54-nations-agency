@@ -1,45 +1,47 @@
-<section id="take-action" style="background: linear-gradient(135deg, #007bff, #00bcd4); color: #fff; padding:100px 0; position:relative; overflow:hidden;">
+<section id="join-campaign" style="background-color:#4B000F; padding:80px 0; color:#fff;">
     <div class="container text-center">
+        <!-- Header -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8">
-                <h2 style="font-size:2.5rem; font-weight:700;">Take Action in Your School</h2>
-                <p style="font-size:1.2rem;">Implement the 54 Nations Code and help reshape how African nations are taught.</p>
+                <h2 style="font-size:2.5rem; font-weight:700; color:#FFD700;">Join the 54 Nations Code</h2>
+                <p style="font-size:1.2rem; color:#fff;">Empower your school to implement the 54 Nations Code and transform how African nations are taught.</p>
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <!-- Three-step columns -->
+        <div class="row">
             <!-- Step 1 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="action-card" data-aos="fade-up">
-                    <div class="action-number">1</div>
-                    <h4>Audit Lessons</h4>
-                    <p>Review your current curriculum and identify where African countries are grouped as one or taught inaccurately.</p>
+                <div class="join-card" data-aos="fade-up">
+                    <div class="join-number" style="background-color:#FFD700; color:#4B000F;">1</div>
+                    <h4>Audit Curriculum</h4>
+                    <p>Review your lessons to identify where African countries are grouped or inaccurately represented.</p>
                 </div>
             </div>
 
             <!-- Step 2 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="action-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="action-number">2</div>
+                <div class="join-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="join-number" style="background-color:#FFD700; color:#4B000F;">2</div>
                     <h4>Revise Content</h4>
-                    <p>Update teaching materials to highlight individual nations, their history, culture, and achievements.</p>
+                    <p>Update materials to highlight **individual nations**, their history, culture, and achievements.</p>
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="action-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="action-number">3</div>
+                <div class="join-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="join-number" style="background-color:#FFD700; color:#4B000F;">3</div>
                     <h4>Share & Inspire</h4>
-                    <p>Document your progress, share best practices with other schools, and inspire wider adoption.</p>
+                    <p>Document your progress, share best practices, and encourage other schools to join the movement.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <style>
-        .action-card {
-            background: rgba(255,255,255,0.1);
+        .join-card {
+            background: #000;
             border-radius: 16px;
             padding: 40px 20px 20px 20px;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -47,18 +49,16 @@
             min-height: 250px;
         }
 
-        .action-card:hover {
+        .join-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
-        .action-number {
+        .join-number {
             position: absolute;
             top: -25px;
             left: 50%;
             transform: translateX(-50%);
-            background: #fff;
-            color: #007bff;
             font-weight:700;
             font-size:2rem;
             width:60px;
@@ -70,26 +70,28 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .action-card h4 {
+        .join-card h4 {
             margin-top: 50px;
             margin-bottom:15px;
             font-size:1.4rem;
             font-weight:700;
+            color:#FFD700;
         }
 
-        .action-card p {
+        .join-card p {
             font-size:1rem;
             line-height:1.5rem;
+            color:#fff;
         }
 
-        @media (max-width:768px){
-            .action-number { top:-20px; font-size:1.7rem; width:50px; height:50px; }
-            .action-card { padding:30px 15px 15px 15px; min-height: 220px; }
+        @media (max-width:992px){
+            .join-number { top:-20px; font-size:1.7rem; width:50px; height:50px; }
+            .join-card { padding:30px 15px 15px 15px; min-height: 220px; }
         }
 
         @media (max-width:576px){
-            .action-number { font-size:1.5rem; width:45px; height:45px; }
-            .action-card { min-height: 200px; padding:25px 10px 10px 10px; }
+            .join-number { font-size:1.5rem; width:45px; height:45px; }
+            .join-card { min-height: 200px; padding:25px 10px 10px 10px; }
         }
     </style>
 
