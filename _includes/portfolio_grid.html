@@ -65,19 +65,19 @@
       min-width: 100%;
       background: #000;
       border-radius: 16px;
-      padding: 60px 20px 20px 20px;
+      padding: 80px 20px 40px 20px; /* top padding for circle, bottom for arrows */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      position: relative;
+      position: relative; /* so arrows and circle are relative */
       box-sizing: border-box;
     }
 
-    /* Yellow circle completely inside card, closer to vertical midline */
+    /* Yellow number circle inside card */
     .join-number {
       position: absolute;
-      top: 20px; /* distance from top inside the card */
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #FFD700;
@@ -95,7 +95,7 @@
     }
 
     .join-card h4 {
-      margin-top: 50px; /* space to avoid circle overlap */
+      margin-top: 70px; /* space below circle */
       margin-bottom: 15px;
       font-size: 1.4rem;
       font-weight: 700;
@@ -110,7 +110,7 @@
       text-align: center;
     }
 
-    /* Arrows attached to card */
+    /* Arrows inside the card */
     .carousel-arrow {
       position: absolute;
       top: 50%;
@@ -127,36 +127,38 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    .carousel-arrow.prev { left: -25px; }
-    .carousel-arrow.next { right: -25px; }
+    .carousel-arrow.prev { left: 10px; }
+    .carousel-arrow.next { right: 10px; }
 
     .carousel-arrow:hover {
       transform: translateY(-50%) scale(1.1);
     }
 
     @media(max-width:576px){
-      .join-card { padding: 80px 15px 15px 15px; }
+      .join-card { padding: 80px 15px 40px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; top:15px; }
-      .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:-20px; right:-20px; }
-      .join-card h4 { margin-top:40px; }
+      .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:5px; right:5px; }
+      .join-card h4 { margin-top:60px; }
     }
   </style>
 
   <script>
     const wrapper = document.querySelector('.carousel-wrapper');
     const totalCards = document.querySelectorAll('.join-card').length;
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
     let currentIndex = 0;
 
     function showCard(index) {
       wrapper.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    document.getElementById('next').addEventListener('click', () => {
+    nextBtn.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % totalCards;
       showCard(currentIndex);
     });
 
-    document.getElementById('prev').addEventListener('click', () => {
+    prevBtn.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + totalCards) % totalCards;
       showCard(currentIndex);
     });
