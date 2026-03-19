@@ -21,21 +21,30 @@
         <div class="join-card">
           <div class="join-number">1</div>
           <h4>Audit Curriculum</h4>
-          <p>Review lessons to identify where African countries are grouped or inaccurately represented.</p>
+          <p>
+            Carefully review your current lessons to identify where African countries are grouped together or inaccurately represented.
+            Take note of textbooks, activities, and discussions that need updating to reflect each nation’s uniqueness.
+          </p>
         </div>
 
         <!-- Step 2 -->
         <div class="join-card">
           <div class="join-number">2</div>
           <h4>Revise Content</h4>
-          <p>Update materials to highlight individual nations, their history, culture, and achievements.</p>
+          <p>
+            Update materials to highlight the unique history, culture, and achievements of each African nation.
+            Include diverse examples, context, and accurate facts so students can understand the continent’s richness.
+          </p>
         </div>
 
         <!-- Step 3 -->
         <div class="join-card">
           <div class="join-number">3</div>
           <h4>Share & Inspire</h4>
-          <p>Document progress, share best practices, and encourage other schools to join the movement.</p>
+          <p>
+            Document your school’s progress and share best practices with others.
+            Encourage fellow educators to join the 54 Nations Code movement and spread awareness about individual African nations.
+          </p>
         </div>
 
       </div>
@@ -65,19 +74,19 @@
       min-width: 100%;
       background: #000;
       border-radius: 16px;
-      padding: 80px 20px 40px 20px; /* top padding for circle, bottom for arrows */
+      padding: 100px 20px 40px 20px; /* top padding for circle, bottom for arrows */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      position: relative; /* so arrows and circle are relative */
+      position: relative;
       box-sizing: border-box;
+      text-align: center;
     }
 
-    /* Yellow number circle inside card */
     .join-number {
       position: absolute;
-      top: 20px;
+      top: 20px; /* moved inside the card */
       left: 50%;
       transform: translateX(-50%);
       background-color: #FFD700;
@@ -100,14 +109,12 @@
       font-size: 1.4rem;
       font-weight: 700;
       color: #FFD700;
-      text-align: center;
     }
 
     .join-card p {
       font-size: 1rem;
       line-height: 1.5rem;
       color: #fff;
-      text-align: center;
     }
 
     /* Arrows inside the card */
@@ -135,7 +142,7 @@
     }
 
     @media(max-width:576px){
-      .join-card { padding: 80px 15px 40px 15px; }
+      .join-card { padding: 90px 15px 40px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; top:15px; }
       .carousel-arrow { width:40px; height:40px; font-size:1.3rem; left:5px; right:5px; }
       .join-card h4 { margin-top:60px; }
