@@ -48,23 +48,25 @@
   </div>
 
   <style>
-    /* Carousel container and wrapper */
+    /* Carousel container hides overflow so only one card shows */
     .carousel-container {
       position: relative;
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      /* overflow removed so number circles are visible */
+      overflow: hidden; /* important! prevents horizontal scroll */
     }
 
+    /* Wrapper is flex row containing all cards */
     .carousel-wrapper {
       display: flex;
       transition: transform 0.6s ease-in-out;
+      width: 300%; /* 3 cards, each 100% of container */
     }
 
-    /* Cards */
+    /* Each card takes 100% of container width */
     .join-card {
-      min-width: 100%;
+      flex: 0 0 100%; /* don't shrink or grow, exactly 100% of container */
       background: #000;
       border-radius: 16px;
       padding: 60px 20px 20px 20px;
@@ -74,6 +76,7 @@
       justify-content: center;
       position: relative;
       box-sizing: border-box;
+      margin: 0 10px; /* small side margin */
     }
 
     /* Step number circle */
@@ -88,12 +91,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -30px; /* slightly overlapping card */
+      margin-top: -30px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
       z-index: 2;
     }
 
-    /* Card text */
     .join-card h4 {
       margin-top: 30px;
       margin-bottom: 15px;
@@ -134,7 +136,6 @@
       transform: translateY(-50%) scale(1.1);
     }
 
-    /* Responsive */
     @media(max-width:576px){
       .join-card { padding: 45px 15px 15px 15px; }
       .join-number { width:50px; height:50px; font-size:1.5rem; margin-top:-25px; }
