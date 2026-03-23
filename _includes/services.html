@@ -1,44 +1,187 @@
-<section id="problems">
+<section id="problems" style="padding:80px 0;">
     <div class="container">
+
+        <!-- Heading -->
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">The Problems We Face</h2>
-                <h3 class="section-subheading text-muted">What’s wrong with how Africa is currently taught</h3>
+                <h3 class="section-subheading text-muted">
+                    What’s wrong with how Africa is currently taught
+                </h3>
             </div>
         </div>
-        <div class="row text-center">
 
-            <!-- Generalisation -->
+        <!-- Problem Cards -->
+        <div class="row text-center" style="margin-top:40px;">
+
             <div class="col-md-4">
-                <img src="img/specificity.jpg" alt="Generalisation" class="service-img mb-3">
+                <img src="img/specificity.jpg" alt="" class="service-img">
                 <h4 class="service-heading">Generalisation</h4>
-                <p class="text-muted">Africa is often treated as a single country, ignoring the 54 unique nations and cultures that exist.</p>
+                <p class="text-muted">
+                    Africa is often treated as a single country, ignoring the 54 unique nations and cultures that exist.
+                </p>
             </div>
 
-            <!-- Inaccuracy -->
             <div class="col-md-4">
-                <img src="img/accuracy.jpg" alt="Inaccuracy" class="service-img mb-3">
+                <img src="img/accuracy.jpg" alt="" class="service-img">
                 <h4 class="service-heading">Inaccuracy</h4>
-                <p class="text-muted">Lessons and materials frequently contain misleading or incomplete information about African history and achievements.</p>
+                <p class="text-muted">
+                    Lessons and materials frequently contain misleading or incomplete information about African history and achievements.
+                </p>
             </div>
 
-            <!-- Stereotypes -->
             <div class="col-md-4">
-                <img src="img/narrative.jpg" alt="Stereotypes" class="service-img mb-3">
+                <img src="img/narrative.jpg" alt="" class="service-img">
                 <h4 class="service-heading">Stereotypes</h4>
-                <p class="text-muted">Teaching often reinforces negative stereotypes, portraying Africa in a limited or harmful way.</p>
+                <p class="text-muted">
+                    Teaching often reinforces negative stereotypes, portraying Africa in a limited or harmful way.
+                </p>
             </div>
 
         </div>
+
+        <!-- Divider -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="divider-line"></div>
+            </div>
+        </div>
+
+        <!-- Evidence Section -->
+        <div class="row text-center" style="margin-top:50px;">
+
+            <div class="col-lg-12">
+                <h3 class="section-subheading" style="color:#FFD700; font-weight:600;">
+                    What students are saying
+                </h3>
+                <p class="text-muted" style="margin-bottom:40px;">
+                    Based on student survey responses
+                </p>
+            </div>
+
+            <!-- Stat 1 -->
+            <div class="col-md-6 col-sm-12 stat-box">
+                <h2 class="stat-number" data-target="87">0%</h2>
+                <p class="stat-text">
+                    of students think Africa is taught differently to other continents
+                </p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="col-md-6 col-sm-12 stat-box">
+                <h2 class="stat-number" data-target="55">0%</h2>
+                <p class="stat-text">
+                    of students say lessons have been confusing, misleading, or inaccurate
+                </p>
+            </div>
+
+            <!-- Quote -->
+            <div class="col-lg-10 col-lg-offset-1 quote-box">
+                <p class="quote-text">
+                    “Seeing where I am from taught in such a manner, makes me feel as though my culture is inherently less than. 
+                    It makes me feel like my school cares less about me”
+                </p>
+                <p class="quote-author">
+                    – Anonymous student, Year 12
+                </p>
+            </div>
+
+        </div>
+
     </div>
 
-    <!-- Inline CSS to make images square and consistent -->
     <style>
         .service-img {
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 3px;
+            background: #FFD700;
+            margin: 60px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .stat-box {
+            margin-bottom: 40px;
+        }
+
+        .stat-number {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            color: #777;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .quote-box {
+            margin-top: 50px;
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .stat-number { font-size: 2.5rem; }
+            .quote-text { font-size: 1.05rem; }
+            .service-img { width: 120px; height: 120px; }
         }
     </style>
+
+    <script>
+        const counters = document.querySelectorAll('.stat-number');
+        let started = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = 30;
+
+                const update = () => {
+                    if (count < target) {
+                        count++;
+                        counter.innerText = count + "%";
+                        setTimeout(update, speed);
+                    } else {
+                        counter.innerText = target + "%";
+                    }
+                };
+
+                update();
+            });
+        }
+
+        // Trigger on scroll into view
+        window.addEventListener('scroll', () => {
+            const section = document.getElementById('problems');
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < window.innerHeight - 100 && !started) {
+                runCounters();
+                started = true;
+            }
+        });
+    </script>
 </section>
