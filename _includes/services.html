@@ -15,7 +15,7 @@
         <div class="row text-center" style="margin-top:40px;">
 
             <div class="col-md-4">
-                <img src="img/specificity.jpg" alt="" class="service-img">
+                <img src="img/specificity.jpg" class="service-img">
                 <h4 class="service-heading">Generalisation</h4>
                 <p class="text-muted">
                     Africa is often treated as a single country, ignoring the 54 unique nations and cultures that exist.
@@ -23,7 +23,7 @@
             </div>
 
             <div class="col-md-4">
-                <img src="img/accuracy.jpg" alt="" class="service-img">
+                <img src="img/accuracy.jpg" class="service-img">
                 <h4 class="service-heading">Inaccuracy</h4>
                 <p class="text-muted">
                     Lessons and materials frequently contain misleading or incomplete information about African history and achievements.
@@ -31,7 +31,7 @@
             </div>
 
             <div class="col-md-4">
-                <img src="img/narrative.jpg" alt="" class="service-img">
+                <img src="img/narrative.jpg" class="service-img">
                 <h4 class="service-heading">Stereotypes</h4>
                 <p class="text-muted">
                     Teaching often reinforces negative stereotypes, portraying Africa in a limited or harmful way.
@@ -47,50 +47,61 @@
             </div>
         </div>
 
-        <!-- Evidence Section -->
-        <div class="row text-center" style="margin-top:50px;">
-
+        <!-- Stats Section -->
+        <div class="row" style="margin-top:60px;">
             <div class="col-lg-12">
-                <h3 class="section-subheading" style="color:#FFD700; font-weight:600;">
-                    What students are saying
-                </h3>
-                <p class="text-muted" style="margin-bottom:40px;">
-                    Based on student survey responses
-                </p>
-            </div>
 
-            <!-- Stat 1 -->
-            <div class="col-md-6 col-sm-12 stat-box">
-                <h2 class="stat-number" data-target="87">0%</h2>
-                <p class="stat-text">
-                    of students think Africa is taught differently to other continents
-                </p>
-            </div>
+                <div class="stats-section">
 
-            <!-- Stat 2 -->
-            <div class="col-md-6 col-sm-12 stat-box">
-                <h2 class="stat-number" data-target="55">0%</h2>
-                <p class="stat-text">
-                    of students say lessons have been confusing, misleading, or inaccurate
-                </p>
-            </div>
+                    <div class="text-center">
+                        <h3 style="color:#FFD700; font-weight:600;">
+                            What students are saying
+                        </h3>
+                        <p class="text-muted" style="margin-bottom:40px;">
+                            Based on student survey responses
+                        </p>
+                    </div>
 
-            <!-- Quote -->
-            <div class="col-lg-10 col-lg-offset-1 quote-box">
-                <p class="quote-text">
-                    “Seeing where I am from taught in such a manner, makes me feel as though my culture is inherently less than. 
-                    It makes me feel like my school cares less about me”
-                </p>
-                <p class="quote-author">
-                    – Anonymous student, Year 12
-                </p>
-            </div>
+                    <div class="row text-center">
 
+                        <!-- Stat 1 -->
+                        <div class="col-md-6 col-sm-12 stat-box">
+                            <h2 class="stat-number" data-target="87">0%</h2>
+                            <p class="stat-text">
+                                of students think Africa is taught differently to other continents
+                            </p>
+                        </div>
+
+                        <!-- Stat 2 -->
+                        <div class="col-md-6 col-sm-12 stat-box">
+                            <h2 class="stat-number" data-target="55">0%</h2>
+                            <p class="stat-text">
+                                of students say lessons have been confusing, misleading, or inaccurate
+                            </p>
+                        </div>
+
+                        <!-- Quote -->
+                        <div class="col-lg-10 col-lg-offset-1 quote-box">
+                            <p class="quote-text">
+                                “Seeing where I am from taught in such a manner, makes me feel as though my culture is inherently less than. 
+                                It makes me feel like my school cares less about me”
+                            </p>
+                            <p class="quote-author">
+                                – Anonymous student, Year 12
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
     </div>
 
     <style>
+        /* Images */
         .service-img {
             width: 150px;
             height: 150px;
@@ -99,6 +110,7 @@
             margin-bottom: 20px;
         }
 
+        /* Divider */
         .divider-line {
             width: 60px;
             height: 3px;
@@ -107,6 +119,15 @@
             border-radius: 2px;
         }
 
+        /* Stats Section Background */
+        .stats-section {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            padding: 60px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Stats */
         .stat-box {
             margin-bottom: 40px;
         }
@@ -116,15 +137,18 @@
             font-weight: 700;
             color: #FFD700;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255,215,0,0.6),
+                         0 0 20px rgba(255,215,0,0.4);
         }
 
         .stat-text {
             font-size: 1.1rem;
-            color: #777;
+            color: #ccc;
             max-width: 400px;
             margin: 0 auto;
         }
 
+        /* Quote */
         .quote-box {
             margin-top: 50px;
         }
@@ -132,16 +156,17 @@
         .quote-text {
             font-size: 1.2rem;
             font-style: italic;
-            color: #555;
+            color: #ddd;
             line-height: 1.8;
         }
 
         .quote-author {
             margin-top: 10px;
             font-weight: 600;
-            color: #999;
+            color: #aaa;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .stat-number { font-size: 2.5rem; }
             .quote-text { font-size: 1.05rem; }
@@ -173,7 +198,6 @@
             });
         }
 
-        // Trigger on scroll into view
         window.addEventListener('scroll', () => {
             const section = document.getElementById('problems');
             const sectionTop = section.getBoundingClientRect().top;
